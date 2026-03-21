@@ -47,7 +47,7 @@
             Tvůj prohlížeč nepodporuje přehrávání audia.
           </audio>
           <p>
-            Text písně (PDF):
+            Text písně ke stažení:
             <a href="assets/pdf/medved-a-noha-text.pdf" target="_blank" rel="noopener noreferrer"
               >Medvěd a noha – text</a
             >
@@ -61,7 +61,7 @@
             Tvůj prohlížeč nepodporuje přehrávání audia.
           </audio>
           <p>
-            Text písně (PDF):
+            Text písně ke stažení:
             <a href="assets/pdf/vodnik-na-kole-text.pdf" target="_blank" rel="noopener noreferrer"
               >Vodník na kole – text</a
             >
@@ -104,7 +104,7 @@
           <a href="mailto:vb@vbtronic.com">vb@vbtronic.com</a>
         </p>
 
-        <form action="mailto:vb@vbtronic.com" method="post" enctype="text/plain">
+        <form id="contactForm" action="mailto:vb@vbtronic.com" method="post" enctype="text/plain">
           <label for="jmeno">Jméno</label>
           <input id="jmeno" name="Jméno" type="text" required />
 
@@ -123,7 +123,8 @@
       <p>
         © <span id="year">2026</span> Funny Music · Autor webu:
         <a href="https://vbtronic.com" target="_blank" rel="noopener noreferrer">Viktor Brunclík</a>
-        · Spoluautor písniček: Pepí
+        · Spoluautor písniček: Pepí · AI pomoc: Amp
+        · Audio nástroj: <a href="https://github.com/rhasspy/piper" target="_blank" rel="noopener noreferrer">Piper TTS (open-source)</a>
       </p>
       <p>
         <a href="privacy-policy.html">Privacy Policy</a>
@@ -131,5 +132,30 @@
         <a href="mailto:vb@vbtronic.com">Kontakt na správce osobních údajů</a>
       </p>
     </footer>
+
+    <script>
+      const year = document.getElementById("year");
+      if (year) {
+        year.textContent = String(new Date().getFullYear());
+      }
+
+      const form = document.getElementById("contactForm");
+      if (form) {
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById("jmeno")?.value?.trim() || "";
+          const email = document.getElementById("email")?.value?.trim() || "";
+          const message = document.getElementById("zprava")?.value?.trim() || "";
+
+          const subject = encodeURIComponent("Kontakt z Funny Music");
+          const body = encodeURIComponent(
+            `Jméno: ${name}\nE-mail: ${email}\n\nZpráva:\n${message}`,
+          );
+
+          window.location.href = `mailto:vb@vbtronic.com?subject=${subject}&body=${body}`;
+        });
+      }
+    </script>
   </body>
 </html>
