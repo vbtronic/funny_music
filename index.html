@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funny Music</title>
+    <meta
+      name="description"
+      content="Funny Music je web s vtipnými písničkami Medvěd a noha a Vodník na kole, včetně audio nahrávek a PDF textů."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="nahoru">
+      <nav class="top-nav">
+        <a href="#pisne">Písně</a>
+        <a href="#autori">O autorech</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="hero-content">
+        <p class="hero-kicker">Vtipné písničky pro radost</p>
+        <h1>Funny Music</h1>
+        <p>
+          Poslechni si dvě originální písně: <strong>Medvěd a noha</strong> a
+          <strong>Vodník na kole</strong>. Najdeš tu hudbu i PDF texty k oběma písničkám.
+        </p>
+        <a class="cta" href="#pisne">Pustit písně</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="pisne" class="section songs">
+        <h2>Písně</h2>
+        <p class="section-intro">Každá píseň obsahuje přehrávač a PDF s textem.</p>
+
+        <article class="song-card">
+          <h3>Medvěd a noha</h3>
+          <audio controls preload="metadata">
+            <source src="assets/audio/medved-a-noha.wav" type="audio/wav" />
+            Tvůj prohlížeč nepodporuje přehrávání audia.
+          </audio>
+          <p>
+            Text písně (PDF):
+            <a href="assets/pdf/medved-a-noha-text.pdf" target="_blank" rel="noopener noreferrer"
+              >Medvěd a noha – text</a
+            >
+          </p>
+        </article>
+
+        <article class="song-card">
+          <h3>Vodník na kole</h3>
+          <audio controls preload="metadata">
+            <source src="assets/audio/vodnik-na-kole.wav" type="audio/wav" />
+            Tvůj prohlížeč nepodporuje přehrávání audia.
+          </audio>
+          <p>
+            Text písně (PDF):
+            <a href="assets/pdf/vodnik-na-kole-text.pdf" target="_blank" rel="noopener noreferrer"
+              >Vodník na kole – text</a
+            >
+          </p>
+        </article>
+      </section>
+
+      <section id="autori" class="section">
+        <h2>O autorech</h2>
+        <div class="authors-grid">
+          <article class="author-card">
+            <h3>
+              <a href="https://vbtronic.com" target="_blank" rel="noopener noreferrer">Viki</a>
+            </h3>
+            <p>
+              Viki je
+              <a href="https://vbtronic.com" target="_blank" rel="noopener noreferrer"
+                >Viktor Brunclík</a
+              >.
+              Je autor webu Funny Music.
+            </p>
+          </article>
+
+          <article class="author-card">
+            <h3>Pepí</h3>
+            <p>Pepí je přítel Vikiho a spoluautor písniček.</p>
+          </article>
+
+          <article class="author-card">
+            <h3>Amp AI pomocník</h3>
+            <p>Amp pomohl nazpívat písně a vytvořit web.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="kontakt" class="section contact">
+        <h2>Kontakt</h2>
+        <p>
+          Napiš přímo na e-mail:
+          <a href="mailto:vb@vbtronic.com">vb@vbtronic.com</a>
+        </p>
+
+        <form action="mailto:vb@vbtronic.com" method="post" enctype="text/plain">
+          <label for="jmeno">Jméno</label>
+          <input id="jmeno" name="Jméno" type="text" required />
+
+          <label for="email">E-mail</label>
+          <input id="email" name="E-mail" type="email" required />
+
+          <label for="zprava">Zpráva</label>
+          <textarea id="zprava" name="Zpráva" rows="5" required></textarea>
+
+          <button type="submit">Odeslat zprávu</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        © <span id="year">2026</span> Funny Music · Autor webu:
+        <a href="https://vbtronic.com" target="_blank" rel="noopener noreferrer">Viktor Brunclík</a>
+        · Spoluautor písniček: Pepí
+      </p>
+      <p>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        ·
+        <a href="mailto:vb@vbtronic.com">Kontakt na správce osobních údajů</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+:root {
+  --bg: #f5f9f2;
+  --bg-soft: #ffffff;
+  --surface: #fef7ea;
+  --text: #1b2a2f;
+  --muted: #4a5d64;
+  --brand: #0b8f87;
+  --brand-strong: #0b6f69;
+  --accent: #ef8d32;
+  --line: #d8e2dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, #fff2cf 0%, transparent 44%),
+    radial-gradient(circle at 90% 10%, #d8f5f3 0%, transparent 35%),
+    var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--brand-strong);
+}
+
+.hero {
+  padding: 1rem 1rem 3rem;
+  background:
+    linear-gradient(130deg, rgba(11, 143, 135, 0.15), rgba(239, 141, 50, 0.12)),
+    var(--bg-soft);
+  border-bottom: 1px solid var(--line);
+}
+
+.top-nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.top-nav a {
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--brand-strong);
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+.hero-kicker {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: #113b44;
+  line-height: 1;
+}
+
+h2 {
+  font-size: clamp(2rem, 4.8vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(120deg, var(--brand), var(--accent));
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.section {
+  margin-top: 2.5rem;
+}
+
+.section-intro {
+  color: var(--muted);
+}
+
+.songs {
+  display: grid;
+  gap: 1rem;
+}
+
+.song-card,
+.author-card,
+.policy-card,
+.contact form {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.song-card {
+  background: linear-gradient(180deg, var(--surface), #ffffff);
+}
+
+audio {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.contact form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #bed0ca;
+  border-radius: 12px;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+}
+
+button {
+  width: fit-content;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(120deg, var(--brand), var(--accent));
+}
+
+.site-footer {
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+  padding: 1rem;
+  text-align: center;
+  background: #eef7f4;
+}
+
+.policy-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.policy-card {
+  margin-top: 1rem;
+}
+
+@media (max-width: 680px) {
+  .top-nav {
+    justify-content: center;
+  }
+
+  .hero-content {
+    margin-top: 2rem;
+  }
+}
